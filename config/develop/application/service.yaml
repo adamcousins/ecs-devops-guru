@@ -1,0 +1,7 @@
+template_path: fargate-service/service-fargate-private-subnet-private-lb.yaml
+dependencies:
+  - develop/foundations/vpc-cluster.yaml
+  - develop/application/ingress.yaml
+
+parameters:
+  EnvironmentName: {{ stack_group_config.environment_name }}

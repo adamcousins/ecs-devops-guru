@@ -1,0 +1,6 @@
+template_path: ingress/alb-internal.yaml
+dependencies:
+  - develop/foundations/vpc-cluster.yaml
+
+parameters:
+  EnvironmentName: {{ stack_group_config.environment_name }}

@@ -1,0 +1,4 @@
+template_path: vpc-cluster/cluster-fargate-private-vpc.yaml
+
+parameters:
+  EnvironmentName: {{ stack_group_config.environment_name }}

@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: DevOps Guru Resource Collection for Analysing
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: production
+    Description: The name of the environment to add this service to
+  StackNames:
+    Type: CommaDelimitedList
+    Description: List Of Stack Names
+
+
+Resources:
+  ResourceCollection:
+    Type: AWS::DevOpsGuru::ResourceCollection
+    Properties:
+      ResourceCollectionFilter:
+        CloudFormation:
+          StackNames: !Ref StackNames
