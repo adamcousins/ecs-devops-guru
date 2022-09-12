@@ -43,6 +43,10 @@ Resources:
       EnableDnsSupport: true
       EnableDnsHostnames: true
       CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
+      Tags:
+      - Key: Name
+        Value: !Sub ${EnvironmentName}:VPC
+
 
   # Two public subnets, where containers can have public IP addresses
   PublicSubnetOne:

@@ -1,4 +1,12 @@
-template_path: vpc-cluster/cluster-fargate-private-vpc.yaml
+template_path: devops-guru/devops-guru-resource-collection.yaml
+
+dependencies:
+  - develop/foundations/vpc-cluster.yaml
+  - develop/application/ingress.yaml
+  - develop/application/service.yaml
 
 parameters:
   EnvironmentName: {{ stack_group_config.environment_name }}
+  StackNames:
+    - "ecs-devopsguru-develop-application-ingress"
+    - "ecs-devopsguru-develop-application-service"
