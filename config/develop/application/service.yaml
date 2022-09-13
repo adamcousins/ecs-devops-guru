@@ -5,3 +5,4 @@ dependencies:
 
 parameters:
   EnvironmentName: {{ stack_group_config.environment_name }}
+  ImageUrl: nginx

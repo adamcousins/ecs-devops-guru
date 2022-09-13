@@ -8,5 +8,6 @@ dependencies:
 parameters:
   EnvironmentName: {{ stack_group_config.environment_name }}
   StackNames:
+    - "ecs-devopsguru-develop-foundations-vpc-cluster"
     - "ecs-devopsguru-develop-application-ingress"
     - "ecs-devopsguru-develop-application-service"
